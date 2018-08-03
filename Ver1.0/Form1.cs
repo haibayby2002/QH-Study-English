@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace Ver1._0
 {
@@ -256,7 +257,11 @@ namespace Ver1._0
                         lvDanhSachBoTu.Items.RemoveAt(thuTu);
                         cmbTenBo.Items.RemoveAt(thuTu);
                         MessageBox.Show("Bạn đã xóa thành công bộ " + s + "!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }                   
+                    }               
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }                
             }
         }
@@ -684,6 +689,12 @@ namespace Ver1._0
 
                 LoadLenTuCSDL();
             }
+        }
+
+        private void btnInTuVung_Click(object sender, EventArgs e)
+        {
+            
+            
         }
 
         private void btnLuuTuVung_Click(object sender, EventArgs e)

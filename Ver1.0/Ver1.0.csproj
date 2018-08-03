@@ -32,9 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTuVung.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoTuVung.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BoTuVung.cs" />
     <Compile Include="CauHoiTracNghiem.cs" />
     <Compile Include="CauHoiTuLuan.cs" />
@@ -67,6 +77,12 @@
     </Compile>
     <Compile Include="FormHocTap.Designer.cs">
       <DependentUpon>FormHocTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInTuVung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInTuVung.Designer.cs">
+      <DependentUpon>FormInTuVung.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLtTracNghiem.cs">
       <SubType>Form</SubType>
@@ -127,6 +143,10 @@
     </Compile>
     <Compile Include="TuVung.cs" />
     <Compile Include="XuLyDuLieu.cs" />
+    <EmbeddedResource Include="BaoCaoTuVung.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaoTuVung.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHocTap.resx">
       <DependentUpon>FormHocTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInTuVung.resx">
+      <DependentUpon>FormInTuVung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLtTracNghiem.resx">
       <DependentUpon>FormLtTracNghiem.cs</DependentUpon>
@@ -269,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

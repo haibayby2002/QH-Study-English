@@ -31,13 +31,13 @@ namespace Ver1._0
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Bộ từ đề xuất",
             "Chứa những từ trong từ điển phần mềm muốn gợi ý cho bạn"}, 0);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Bộ từ nên tập của bạn",
             "Chứa những từ cần luyện tập của bạn để cải thiện và nâng cao kĩ năng"}, 0);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Bộ từ ngẫu nhiên",
             "Phát sinh ngẫu nhiên những từ để bạn luyện tập"}, 0);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ptbChe));
@@ -83,6 +83,7 @@ namespace Ver1._0
             this.btnTrangChu = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnInTuVung = new System.Windows.Forms.Button();
             this.tab.SuspendLayout();
             this.tabTrangChu.SuspendLayout();
             this.tabTuVung.SuspendLayout();
@@ -132,13 +133,13 @@ namespace Ver1._0
             this.tenBoNenTap,
             this.moTaBoNenTap});
             this.lvBoTuNenTap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            listViewItem4.ToolTipText = "Chứa những từ trong từ điển phần mềm muốn gợi ý cho bạn";
-            listViewItem5.ToolTipText = "Chứa những từ cần luyện tập của bạn để cải thiện và nâng cao kĩ năng";
-            listViewItem6.ToolTipText = "Phát sinh ngẫu nhiên những từ để bạn luyện tập";
+            listViewItem1.ToolTipText = "Chứa những từ trong từ điển phần mềm muốn gợi ý cho bạn";
+            listViewItem2.ToolTipText = "Chứa những từ cần luyện tập của bạn để cải thiện và nâng cao kĩ năng";
+            listViewItem3.ToolTipText = "Phát sinh ngẫu nhiên những từ để bạn luyện tập";
             this.lvBoTuNenTap.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.lvBoTuNenTap.LargeImageList = this.imgAnhLon;
             this.lvBoTuNenTap.Location = new System.Drawing.Point(7, 315);
             this.lvBoTuNenTap.Name = "lvBoTuNenTap";
@@ -317,6 +318,7 @@ namespace Ver1._0
             // 
             this.tabTuVung.BackColor = System.Drawing.Color.LightSkyBlue;
             this.tabTuVung.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabTuVung.Controls.Add(this.btnInTuVung);
             this.tabTuVung.Controls.Add(this.lvDanhSachTu);
             this.tabTuVung.Controls.Add(this.btnHocTu);
             this.tabTuVung.Controls.Add(this.btnLuyenTap);
@@ -566,6 +568,16 @@ namespace Ver1._0
             // 
             this.openFileDialog1.Filter = "(*.txt)|*.txt";
             // 
+            // btnInTuVung
+            // 
+            this.btnInTuVung.Location = new System.Drawing.Point(430, 53);
+            this.btnInTuVung.Name = "btnInTuVung";
+            this.btnInTuVung.Size = new System.Drawing.Size(106, 41);
+            this.btnInTuVung.TabIndex = 3;
+            this.btnInTuVung.Text = "In Từ Vựng";
+            this.btnInTuVung.UseVisualStyleBackColor = true;
+            this.btnInTuVung.Click += new System.EventHandler(this.btnInTuVung_Click);
+            // 
             // ptbChe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -637,6 +649,7 @@ namespace Ver1._0
         private System.Windows.Forms.ColumnHeader tenBoNenTap;
         private System.Windows.Forms.ColumnHeader moTaBoNenTap;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnInTuVung;
     }
 }
 
